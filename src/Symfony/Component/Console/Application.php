@@ -26,6 +26,7 @@ use Symfony\Component\Console\Command\ListCommand;
 use Symfony\Component\Console\Helper\HelperSet;
 use Symfony\Component\Console\Helper\FormatterHelper;
 use Symfony\Component\Console\Helper\DialogHelper;
+use Symfony\Component\Console\Helper\TableHelper;
 
 /**
  * An Application is the container for a collection of commands.
@@ -74,6 +75,7 @@ class Application
         $this->helperSet = new HelperSet(array(
             new FormatterHelper(),
             new DialogHelper(),
+            new TableHelper(),
         ));
 
         $this->add(new HelpCommand());
